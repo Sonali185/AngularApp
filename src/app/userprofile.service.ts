@@ -5,5 +5,18 @@ import { Injectable } from '@angular/core';
 })
 export class UserprofileService {
 
-  constructor() { }
+  constructor() {
+  }
+  getAddress() {
+    let addr =
+    {
+      area: 'ballewadi',
+      pincode: 413221,
+      locality: 'tower'
+    };
+  }
+  getCompanyName()
+  {
+    return 'T-Systems';
+  }
 }

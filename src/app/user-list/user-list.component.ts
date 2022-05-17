@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserprofileService } from '../userprofile.service';
 
 @Component({
   selector: 'app-user-list',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userlist:UserprofileService) 
+  {
+    console.log("I am a userList-Component") 
+    let myadrs=this.userlist.getAddress();
+    console.log(myadrs);
+  }
 
   ngOnInit(): void {
   }
