@@ -12,11 +12,7 @@ export class ContactUsComponent implements OnInit {
     let mycopm=this.contus.getCompanyName();
     console.log(mycopm);
    }
-  //  constructor(private mylist:UserprofileService)
-  //  {
-  //    let mylst=this.mylist.getAddress();
-  //    console.log(mylst);
-  //  }
+
 
   ngOnInit(): void {
   }
