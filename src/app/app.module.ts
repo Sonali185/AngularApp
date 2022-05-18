@@ -10,7 +10,18 @@ import { UserListComponent } from './user-list/user-list.component';
 import { HighlightDirective } from './highlight.directive';
 import { ImgurlPipe } from './imgurl.pipe';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-
+import { HomeComponentComponent } from './home-component/home-component.component';
+//import { Routes } from '@angular/router';
+import { RouterModule,Routes } from '@angular/router';
+const routesConfig: Routes = [
+  {
+    path: '',
+    component: HomeComponentComponent
+  },
+  {
+    path: 'contact-us',
+    component: ContactUsComponent
+  },]
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,11 +32,13 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     UserListComponent,
     HighlightDirective,
     ImgurlPipe,
-    ContactUsComponent
+    ContactUsComponent,
+    HomeComponentComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routesConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
